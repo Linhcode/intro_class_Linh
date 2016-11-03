@@ -91,7 +91,7 @@ def main():
 					break
 				else:
 					remove_item(which_list, item_remove)
-		#same code for choice 4 & 5 but only 4 works?????
+		
 		elif choice == 6:
 			which_list = raw_input("Which list would you like to remove?")
 			remove_list(which_list)
