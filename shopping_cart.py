@@ -75,12 +75,23 @@ def main():
 			add_list(new_list)
 		elif choice == 4:
 			which_list = raw_input("Which list would you like to modify?")
-			item_add = raw_input("Which item would you like to add?")
-			add_item(which_list, item_add)
+			while(True):
+				print "Type done to stop"
+				item_add = raw_input("Which item would you like to add?").lower()
+				if item_add == "done":
+					break
+				else: 
+					add_item(which_list, item_add)
 		elif choice == 5:
 			which_list = raw_input("Which list would you like to modify?")
-			item_remove= raw_input("Which item would you like to remove?")
-			remove_item(which_list, item_remove)
+			while(True):
+				print "Type done to stop"
+				item_remove = raw_input("Which item would you like to remove?").lower()
+				if item_remove == "done":
+					break
+				else:
+					remove_item(which_list, item_remove)
+		#same code for choice 4 & 5 but only 4 works?????
 		elif choice == 6:
 			which_list = raw_input("Which list would you like to remove?")
 			remove_list(which_list)
