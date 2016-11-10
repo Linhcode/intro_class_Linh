@@ -39,6 +39,15 @@ def add_item(which_list, item_add):
 		print the_list
 		print shopping_lists
 
+def add_several_items(which_list, item_add):
+	items = item_add.split(",")
+	#if users put more than 1 item, this splits several items into a list
+	#of items
+	for item in items:
+		item_clear = item.strip()
+		#this clear the space if any, before and after the items.
+		add_item(which_list, item_clear)
+
 #menu5
 def remove_item(which_list, item_remove):
 	the_list = shopping_lists[which_list]
@@ -81,7 +90,7 @@ def main():
 				if item_add == "done":
 					break
 				else: 
-					add_item(which_list, item_add)
+					add_several_items(which_list, item_add)
 		elif choice == 5:
 			which_list = raw_input("Which list would you like to modify?")
 			while(True):
