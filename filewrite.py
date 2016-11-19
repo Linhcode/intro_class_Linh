@@ -17,6 +17,29 @@ def read_from_file():
 # print read_from_file()
 
 
+def convert_score_to_letter(score):
+	if score >=90:
+		print score "is an A"
+	elif score >=80:
+		print score "is a B"
+	elif score >=70:
+		print score "is a C"
+	elif score >=60:
+		print score "is a D"
+	else:
+		print "You failed!"
+def file_to_list()
+	with open("class_grades.txt") as my_file: 
+		grade_list = my_file.readlines()
+	return grade_list
+def main():
+	grade_list = file_to_list()
+	for grade in grade_list:
+		convert_score_to_letter(int(grade.strip()))
+if __name__ == '__main__':
+	main()
+
+
 
 
 
